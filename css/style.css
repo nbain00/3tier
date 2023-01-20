@@ -89,7 +89,6 @@ input {
   }
 
 #data{
-    width: 100vw;
     overflow-x: scroll;
 }
 
