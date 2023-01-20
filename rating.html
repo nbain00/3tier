@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>My Rating System</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="css/boot.css">
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/datagrid.js"></script>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Bain's Movie Reviews</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.html">Home</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="movies.html">All Reviews</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="topten.html">Bain's Top Ten</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="rating.html">My Rating System</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="about.html">About Me</a>
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <h1 class="mt-4">My Rating System</h1>
+                    <br>
+                    <p>
+                        My rating system isn't exactly standard. For this reason, I've included this page which describes how the films are rated, and how the two area ratings are combined to achieve an "Overall" rating.
+                    </p>
+                    <p>
+                        Each movie is given an "individual" rating. One "Technical," and one "Fun" rating. Technical rating is based on overall technical quality of the film. This includes aspects like
+                        narrative, acting, directing, cinematography, etc. Secondly, the "Fun" rating is simply based on how much I enjoyed the film. Each area is given a letter, which then corresponds to a value.
+                    </p>
+                    <p>
+                        To achieve the "Overall" rating, the values of the two areas are averaged, and then I use this "Overall" table to find which letter corresponds to the value the average produced.
+                    </p>
+                </div>
+                <div  class="container">
+                    <div>
+                        <p>Individual</p>
+                        <table>
+                            <thead>
+                                <td>
+                                    Grade
+                                </td>
+                                <td>
+                                    Value
+                                </td>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        S
+                                    </td>
+                                    <td>
+                                        10
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        A+
+                                    </td>
+                                    <td>
+                                        9
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        A-
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        B+
+                                    </td>
+                                    <td>
+                                        7
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        B-
+                                    </td>
+                                    <td>
+                                        6
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        C+
+                                    </td>
+                                    <td>
+                                        5
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        C-
+                                    </td>
+                                    <td>
+                                        4
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        D+
+                                    </td>
+                                    <td>
+                                        3
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        D-
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        F
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <p>Overall</p>
+                            <thead>
+                                <td>
+                                    Grade
+                                </td>
+                                <td>
+                                    Low
+                                </td>
+                                <td>
+                                    High
+                                </td>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        S
+                                    </td>
+                                    <td>
+                                        10
+                                    </td>
+                                    <td>
+                                        10
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        A+
+                                    </td>
+                                    <td>
+                                        9
+                                    </td>
+                                    <td>
+                                        &lt;10
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        A-
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        &lt;9
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        B+
+                                    </td>
+                                    <td>
+                                        7
+                                    </td>
+                                    <td>
+                                        &lt;8
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        B-
+                                    </td>
+                                    <td>
+                                        &lt;5.5
+                                    </td>
+                                    <td>
+                                        &lt;7
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        C+
+                                    </td>
+                                    <td>
+                                        &lt;4
+                                    </td>
+                                    <td>
+                                        5.5
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        C-
+                                    </td>
+                                    <td>
+                                        &lt;3
+                                    </td>
+                                    <td>
+                                        4
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        D+
+                                    </td>
+                                    <td>
+                                        &lt;2
+                                    </td>
+                                    <td>
+                                        3
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        D-
+                                    </td>
+                                    <td>
+                                        &lt;1
+                                    </td>
+                                    <td>
+                                        2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        F
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        1
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
