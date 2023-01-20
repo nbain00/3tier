@@ -80,6 +80,8 @@ function add_cell(field, value, row, id, static){ // adds a cell to a row
         input.size = field.width                            // set the size of the input tag width specified
         input.onchange = change_value                       // confiture the INPUT tag so that it will execute the change_value function when the user changes the value 
         input.id = data.table + "-" + id + "-" + field.name // set up the id of of the INPUT tag so we know just what data to change in the database
+        if(field.name == "technical_grade" || field.name == "fun_grade"){input.classList.add("grade")}
+        else if(field.name == "overall_grade"){input.classList.add("overall")}
         cell.appendChild(input)                             // put the fully configured INPUT tag into the cell
     }    
 }

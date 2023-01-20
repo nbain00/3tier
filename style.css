@@ -9,11 +9,12 @@ table {
 
 td {
     border: 1px solid black;
-    padding: 0;
+    padding: 5;
 }
 
 th {
-    padding: 0;
+    padding: 5;
+    height: 30;
     text-align: center;
     background-color: #800000;
     color: white;
@@ -66,5 +67,17 @@ input {
     color:white;
     font-weight: 500;
     display:none
+}
+
+.grade{
+    font-weight: bold;
+    font-size: 20;
+    text-align: center;
+}
+
+.overall {
+    font-size: 28;
+    font-weight: bolder;
+    text-align: center;
 }
 
