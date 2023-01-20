@@ -1,6 +1,6 @@
 // URL to your production code when you publish yoru google app script as a web app
 // You will get this URL when you publish your google apps script as a web app
-let prefix="https://script.google.com/macros/s/AKfycbx8_SjhKAZZ775LIa2VApfO2wZ1Rv1tKdbelLo_BHu3r8FalBOWNn7aMLr8FfMwcV3DfQ/exec" // looks like: https://script.google.com/macros/s/AKfycbz90JgtbAjrjz8c8WQGjgy8kM2GtdCAulom8XWOQyGoeX8DXM5XsmUMAcSYSSyZwwNSLq/exec
+let prefix="https://script.google.com/macros/s/AKfycbwbcr2Lr4CMDIQklat9vw3RMHEzS-WCUc_Esz4VBWigT8kTjwQjDnfRzQJlyZP80QR8/exec" // looks like: https://script.google.com/macros/s/AKfycbz90JgtbAjrjz8c8WQGjgy8kM2GtdCAulom8XWOQyGoeX8DXM5XsmUMAcSYSSyZwwNSLq/exec
 const dealy_seconds = 4 // how long data validation messages are visible
 
 //example call: file:///C:/Users/Gove/three-tier/datagrid.html?employee
@@ -11,7 +11,7 @@ function start_me_up(){  // runs when the body has loaded
     if(table){
         get_data(table)                                        // a table has been specified in the URL, open it
     }else{
-        window.location.replace(window.location + "?Employee") // no table supplied in the URL, default to the Employee table
+        window.location.replace(window.location + "?Movie") // no table supplied in the URL, default to the Movie table
     }    
 }
 
@@ -74,9 +74,9 @@ function add_cell(field, value, row, id, static){ // adds a cell to a row
             cell.appendChild(document.createTextNode(" "))  // add a space so the images are not crammed together
         }
     }else{                                                  // field is allowed to be edited
-        const input=document.createElement('input')         // make an INPUT tag to put in the cell so the data is editable
+        const input=document.createElement('p')         // make an INPUT tag to put in the cell so the data is editable
         input.type="text"                                   // set the type of the INPUT so this will be editable data
-        if(value!=undefined){input.value=value}             // if a value was passed in, put it in the value of the INPUT tag
+        if(value!=undefined){input.innerText=value}             // if a value was passed in, put it in the value of the INPUT tag
         input.size = field.width                            // set the size of the input tag width specified
         input.onchange = change_value                       // confiture the INPUT tag so that it will execute the change_value function when the user changes the value 
         input.id = data.table + "-" + id + "-" + field.name // set up the id of of the INPUT tag so we know just what data to change in the database
