@@ -88,7 +88,12 @@ input {
     margin-bottom: 12px; /* Add some space below the input */
   }
 
- .new-table tr:hover {
+#data{
+    width: 100vw;
+    overflow-x: scroll;
+}
+
+ #data-table tr:hover {
     /* Add a grey background color to the table header and on hover */
     background-color: #f1f1f1;
   }
