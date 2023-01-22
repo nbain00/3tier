@@ -16,7 +16,7 @@ function start_me_up(){  // runs when the body has loaded
 }
 
 function get_data(table){ // get data from airtable for the specified table using the google apps script specfied atop this file
-    document.title=table                                                 // put the table name on the browser tab holding the data
+    //document.title=table                                                 // put the table name on the browser tab holding the data
     const script = document.createElement('script')                      // make a new scrip tag to allow us to fetch data from google apps script
     script.id="data-script"                                              // set the ID of the sript tag so we can refer to it later
     script.onload = show_data                                            // after the script is loaded, run the show_data function
