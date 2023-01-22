@@ -78,7 +78,7 @@ input {
 }
 
 .search-input {
-    background-image: url('/img/searchicon.png'); /* Add a search icon to input */
+    background-image: url('https://www.w3schools.com/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 100%; /* Full-width */
@@ -117,4 +117,60 @@ input {
     font-weight: bold;
     background-color: #800000;
     color: white;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 450px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+  /* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+  /* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+  /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+/* Style the back side */
+.flip-card-back{
+    transform: rotateY(180deg);
+}
+
+.flip-card-back-bg{
+    background-image: url('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSu_HQf7Sgkij6NptUWlEKf6V9n5bC5cL1JfGFNylGC8VnfN_-N');
+    background-size: 300px;
+}
+
+.flip-card-text {
+    color: white;
+    filter: blur(0px);
+    backdrop-filter: blur(10px);
+    height: 450px;
+    padding-top: 25px;
 }
